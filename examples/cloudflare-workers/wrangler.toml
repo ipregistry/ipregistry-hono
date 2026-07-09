@@ -1,0 +1,6 @@
+name = "ipregistry-hono-example"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+
+# Set the API key as a secret, never as a plain var:
+#   npx wrangler secret put IPREGISTRY_API_KEY

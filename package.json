@@ -1,0 +1,91 @@
+{
+    "name": "@ipregistry/hono",
+    "description": "Official Ipregistry integration for Hono: middleware-driven IP geolocation and threat detection for every request, on any runtime.",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.cts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.mts",
+                "default": "./dist/index.mjs"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        },
+        "./package.json": "./package.json"
+    },
+    "sideEffects": false,
+    "homepage": "https://ipregistry.co",
+    "license": "Apache-2.0",
+    "keywords": [
+        "hono",
+        "middleware",
+        "cloudflare-workers",
+        "bun",
+        "deno",
+        "edge",
+        "geolocation",
+        "ip",
+        "ipaddress",
+        "ip intelligence",
+        "ip geolocation",
+        "ipregistry",
+        "geoblocking",
+        "gdpr",
+        "threat-data",
+        "typescript"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ipregistry/ipregistry-hono.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ipregistry/ipregistry-hono/issues"
+    },
+    "scripts": {
+        "build": "tsdown",
+        "clean": "rm -rf dist/",
+        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|tsx|json|md)\"",
+        "prepack": "npm run clean && npm run build",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "typecheck": "tsc --noEmit"
+    },
+    "author": "Ipregistry <support@ipregistry.co>",
+    "dependencies": {
+        "@ipregistry/client": "^7.0.0"
+    },
+    "peerDependencies": {
+        "hono": ">=4.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^26.1.0",
+        "hono": "^4.12.0",
+        "prettier": "^3.0.0",
+        "tsdown": "^0.22.4",
+        "typescript": "^7.0.2",
+        "vitest": "^4.1.9"
+    },
+    "overrides": {
+        "tsdown": {
+            "typescript": "$typescript"
+        }
+    },
+    "files": [
+        "dist/**",
+        "CHANGELOG.md",
+        "MIGRATION.md"
+    ],
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "private": false
+}
