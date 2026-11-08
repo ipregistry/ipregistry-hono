@@ -38,7 +38,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24.x
+          node-version: 26.x
 
       - name: Validate version
         # The raw input is passed through the environment (never interpolated
@@ -103,7 +103,7 @@ jobs:
           npm run build
 
       - name: Publish to npm
-        # Trusted publishing needs npm 11.5.1+, which Node.js 24 already
+        # Trusted publishing needs npm 11.5.1+, which Node.js 26 already
         # bundles. Do not self-upgrade npm here: `npm install -g npm@latest`
         # across a major version can leave a broken global install (missing
         # sigstore). Provenance is generated automatically with OIDC.
