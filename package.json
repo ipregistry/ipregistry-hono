@@ -1,7 +1,7 @@
 {
     "name": "@ipregistry/hono",
     "description": "Official Ipregistry integration for Hono: middleware-driven IP geolocation and threat detection for every request, on any runtime.",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "type": "module",
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
