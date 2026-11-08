@@ -58,7 +58,7 @@
     },
     "author": "Ipregistry <support@ipregistry.co>",
     "dependencies": {
-        "@ipregistry/client": "^7.0.0"
+        "@ipregistry/client": "^7.2.0"
     },
     "peerDependencies": {
         "hono": ">=4.0.0"
